@@ -1,26 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
+using System.Configuration;
 
 namespace ToDoApi;
 
 public partial class ToDoDbContext : DbContext
 {
-    public ToDoDbContext()
+    private readonly IConfiguration _configuration;
+    public  DbSet<Item> Items { get; set; }
+ 
+     public ToDoDbContext(DbContextOptions<ToDoDbContext> options, IConfiguration configuration) : base(options)
     {
+        _configuration = configuration;
     }
-
-    public ToDoDbContext(DbContextOptions<ToDoDbContext> options)
-        : base(options)
-    {
-    }
-
-    public virtual DbSet<Item> Items { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseMySql("name=ToDoDB", Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.36-mysql"));
-
+    {        
+        string connectionString = _configuration["ToDoDB"];
+        optionsBuilder.UseMySql(connectionString,Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.36-mysql"));
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder

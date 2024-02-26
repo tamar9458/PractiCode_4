@@ -97,3 +97,9 @@ D:\אחיותי היקרות\תמי\תכנות תמי\פרקטיקוד\ToDoList\
 D:\אחיותי היקרות\תמי\תכנות תמי\פרקטיקוד\ToDoList\ToDoApi\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\אחיותי היקרות\תמי\תכנות תמי\פרקטיקוד\ToDoList\ToDoApi\obj\Debug\net8.0\ToDoApi.csproj.AssemblyReference.cache
 D:\אחיותי היקרות\תמי\תכנות תמי\פרקטיקוד\ToDoList\ToDoApi\obj\Debug\net8.0\ToDoApi.csproj.CopyComplete
+D:\אחיותי היקרות\תמי\תכנות תמי\פרקטיקוד\ToDoList\ToDoApi\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\אחיותי היקרות\תמי\תכנות תמי\פרקטיקוד\ToDoList\ToDoApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\אחיותי היקרות\תמי\תכנות תמי\פרקטיקוד\ToDoList\ToDoApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\אחיותי היקרות\תמי\תכנות תמי\פרקטיקוד\ToDoList\ToDoApi\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\אחיותי היקרות\תמי\תכנות תמי\פרקטיקוד\ToDoList\ToDoApi\obj\Debug\net8.0\ToDoApi.MvcApplicationPartsAssemblyInfo.cs
+D:\אחיותי היקרות\תמי\תכנות תמי\פרקטיקוד\ToDoList\ToDoApi\obj\Debug\net8.0\ToDoApi.sourcelink.json
