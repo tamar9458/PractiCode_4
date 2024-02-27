@@ -58,20 +58,19 @@ builder.Services.AddScoped<Service>();
 var app = builder.Build();
 
 //app.UseCors(options => options.AllowAnyMethod());
-//app.UseCors(options => options.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader());
+app.UseCors(options => options.AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader());
 
 //app.UseStaticFiles();
 
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
     //app.UseSwaggerUI();
     app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "API V1");
-    c.RoutePrefix = "/swagger";
+    c.RoutePrefix =string.Empty;
 });
-}
+
 app.MapGet("/", () => "Welcome to ToDoApi!");
 // app.MapGet("/todos", () => {null});
 // app.MapGet("/{id}", (int id, Service service) => { });

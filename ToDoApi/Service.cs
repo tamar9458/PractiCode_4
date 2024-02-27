@@ -9,6 +9,7 @@ public class Service
     public Service(ToDoDbContext context)
     {
         _context = context;
+        
     }
 
     public async Task<IEnumerable<Item>> GetAllAsync()
@@ -22,13 +23,15 @@ public class Service
         if(item!=null){
             item.Name=value.Name;
             item.IsComplete=value.IsComplete;
+             await _context.SaveChangesAsync();
         }
         return item;
     }
     public async Task<Item> PostItemAsync(Item value)
     {
         await _context.AddAsync(value);
-        return await _context.Items.FindAsync(value.Id);
+         await _context.SaveChangesAsync();
+        return value;
     }
     public async Task<Item> DeleteItemAsync(int id)
     {
@@ -36,6 +39,7 @@ public class Service
         if(item!=null)
         {
            _context.Items.Remove(item);
+            await _context.SaveChangesAsync();
         }
         return item;
 }
